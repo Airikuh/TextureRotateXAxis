@@ -72,7 +72,7 @@ class App:
             #yaw: y-axis, shows eulers[2]         
             #Try x-axis: euler[1]
             #No, Stopped moving!
-            self.cube.eulers[1] = (self.cube.eulers[1]+0.25)%360                   
+            self.cube.eulers[0] = (self.cube.eulers[0]+0.25)%360                   
             #refresh screen
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
             glUseProgram(self.shader)
@@ -195,7 +195,6 @@ class Material:
 
 if __name__ == "__main__":
     myApp = App()
-
 
 
 
